@@ -4,22 +4,9 @@
 
 A retail/e-commerce demo where a **single Snowflake Cortex Agent** answers questions across data that lives in both **Snowflake** and **AWS S3**, queryable from **Snowflake CoWork**.
 
-```
-                          Snowflake CoWork (User asks questions)
-                                      |
-                              Cortex Agent (orchestrator)
-                             /         |           \
-                    Cortex Analyst   Cortex Search   MCP Connector
-                        |               |                |
-                  Semantic View    Search Service   AgentCore Gateway
-                        |               |                |
-                  [Structured]     [Unstructured]    Bedrock KB
-                   Orders,         Reviews,              |
-                  Products,        Support           S3 Bucket
-                  Customers        Tickets          [Product Manuals,
-                                                    Return Policies,
-                                                    Shipping Guides]
-```
+## Architecture
+
+![ShopSmart Cross-Platform AI Agent Architecture](docs/architecture.png)
 
 ### What data lives where
 
